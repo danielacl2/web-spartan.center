@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spartan Center Segovia · Entrenamiento y nutrición personalizados</title>
+<meta name="description" content="Spartan Center, centro de asesoramiento físico y nutricional en Segovia. Tabla personalizada, mediciones y seguimiento.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Public+Sans:wght@400;600&display=swap">
+<style>
+:root{--bg:#0E1821;--bg2:#15222D;--ink:#EDE9E2;--mute:#9EABB7;--hero:#0A1118;--hero-ink:#F1EEE8;--bronze:#C98A45;--line:#2A3946;--r:6px;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+/* tema oscuro por defecto */
+:root[data-theme="dark"]{--bg:#101A23;--bg2:#17232E;--ink:#EDE9E2;--mute:#9AA7B4;--hero:#0B131A;--line:#2A3946}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background-color:#0B141C;background-image:radial-gradient(circle at 2px 2px,rgba(255,255,255,.07) 1.3px,transparent 1.7px);background-size:24px 24px;color:var(--ink);font:400 1.05rem/1.6 "Public Sans",system-ui,Segoe UI,Arial,sans-serif}
+h1,h2,h3{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:900;line-height:.95;margin:0;letter-spacing:.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bronze);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--hero);color:var(--hero-ink)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+nav b{font:900 1.35rem "Big Shoulders Display",Impact,sans-serif;letter-spacing:.04em}
+nav div{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}
+nav a{text-decoration:none;opacity:.85}nav a:hover{opacity:1}
+.hero{background:var(--hero);color:var(--hero-ink);padding:72px 0 80px;overflow:hidden;position:relative}
+.hero::after{content:none}
+.hero h1{font-size:clamp(3.2rem,11vw,7.5rem);max-width:11ch;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero p{max-width:46ch;margin:22px 0 32px;font-size:1.15rem;color:#D6D2CA}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.btns{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.btn{display:inline-block;padding:14px 24px;border-radius:var(--r);font-weight:600;text-decoration:none;border:2px solid var(--bronze);transition:background .2s,color .2s}
+.btn.main{background:var(--bronze);color:#14202B}.btn.main:hover{background:#D09250}
+.btn.ghost{color:var(--hero-ink)}.btn.ghost:hover{background:rgba(181,121,58,.2)}
+section{padding:76px 0}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(2.3rem,6vw,3.8rem);margin-bottom:26px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.lead{font-size:1.2rem;max-width:52ch}
+.mute{color:var(--mute)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border-top:3px solid var(--bronze)}
+.svc article{padding:26px 22px 28px 0;border-bottom:1px solid var(--line)}
+.svc h3{font-size:1.7rem;margin-bottom:10px}
+.svc p{margin:0;color:var(--mute);max-width:34ch}
+.note{border-left:4px solid var(--bronze);padding:6px 0 6px 18px;max-width:58ch}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--bronze);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--mute);max-width:60ch}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 22px}
+dt{font-weight:600}dd{margin:0}
+footer.site{background:var(--hero);color:#B9C2CB;padding:30px 0;font-size:.88rem}
+.ico{width:26px;height:26px;stroke:var(--bronze);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+section.alt .card{background:var(--bg)}
+.card h3{font-size:1.6rem;margin:6px 0 8px}
+.card p{margin:0;color:var(--mute)}
+.hrs .card.big{background:var(--hero);color:var(--hero-ink);border-color:var(--hero)}
+.hrs .card.big p{color:#C9D1D8}
+.time{font:900 clamp(2rem,5vw,2.8rem)/1 "Big Shoulders Display",Impact,sans-serif;display:block;margin:4px 0 10px}
+.chip{display:flex;gap:12px;align-items:center;margin-top:22px}
+.chip p{margin:0}
+.price{font:900 3.2rem/1 "Big Shoulders Display",Impact,sans-serif;margin-bottom:10px}
+.price small{font:600 1rem "Public Sans",sans-serif;color:var(--mute)}
+.ticks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px 28px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.why{background:var(--hero);color:var(--hero-ink)}
+.why .ticks li{font-size:1.15rem}
+.why .btns{margin-top:34px}
+.rule{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;max-width:660px}
+.rule h3{font-size:1.4rem;margin:0 0 4px}.rule p{margin:0;color:var(--mute)}
+.verify{font-size:.85rem;color:var(--mute);margin:18px 0 0}
+.who{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.who .card{display:flex;flex-direction:column;gap:6px;min-height:200px}
+.who .card h3{font-size:1.9rem;margin:0 0 6px}
+.who .card:nth-child(1){background:var(--hero);color:var(--hero-ink);border-color:var(--hero)}
+.who .card:nth-child(1) p{color:#C9D1D8}
+.who .card:nth-child(2){border-top:5px solid var(--bronze)}
+.who .card:nth-child(3){background:var(--bronze);color:#14202B;border-color:var(--bronze)}
+.who .card:nth-child(3) p{color:#14202B}
+.who .card:nth-child(4){border-left:5px solid var(--bronze)}
+.who .card:nth-child(5){border:2px solid var(--bronze)}
+.rows{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line);grid-template-columns:1fr;gap:2px;font-size:.95rem}
+.rows dt{color:var(--mute);font-weight:400}
+.rows dd{font-weight:600;text-align:left;margin:0 0 10px}
+[hidden]{display:none!important}
+section{position:relative;isolation:isolate}
+
+section::after{content:"";position:absolute;top:0;left:max(22px,calc(50% - 518px));width:72px;height:4px;background:var(--bronze)}
+body::before{content:"";position:fixed;z-index:-1;right:-280px;top:12vh;width:720px;height:720px;border-radius:50%;pointer-events:none;background:repeating-radial-gradient(circle,transparent 0 38px,rgba(201,138,69,.11) 38px 41px,transparent 41px 42px)}
+@media (max-width:600px){body::before{width:480px;height:480px;right:-240px}}
+section.alt{background:rgba(2,8,13,.42);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+.hero{background:repeating-radial-gradient(circle at 86% 52%,transparent 0 44px,rgba(201,138,69,.14) 44px 46px),linear-gradient(115deg,#0A1118 0 60%,#101C28 60% 100%)}
+.why{background:#0A1118 repeating-linear-gradient(90deg,transparent 0 79px,rgba(255,255,255,.05) 79px 80px)}
+.hrs .card.big{border-color:rgba(201,138,69,.45)}
+.para{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start}
+.para-intro{position:sticky;top:90px}
+.bar{width:100%;max-width:300px;height:auto;stroke:var(--bronze);fill:rgba(201,138,69,.15);stroke-width:2;margin:4px 0 24px;display:block}
+.profs{display:grid;gap:12px}
+.prof{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:center;padding:18px 36px 18px 20px;background:linear-gradient(90deg,rgba(201,138,69,.16),rgba(255,255,255,.03));border-left:4px solid var(--bronze);clip-path:polygon(0 0,100% 0,calc(100% - 20px) 100%,0 100%);transition:transform .3s,background .3s}
+.prof:hover{transform:translateX(6px);background:linear-gradient(90deg,rgba(201,138,69,.28),rgba(255,255,255,.05))}
+.badge{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:rgba(201,138,69,.15);border:1px solid rgba(201,138,69,.5)}
+.badge .ico{width:28px;height:28px}
+.prof h3{font-size:1.7rem;margin:0 0 4px}
+.prof p{margin:0;color:var(--mute)}
+button.btn{font:inherit;font-weight:600;cursor:pointer;background:transparent;color:var(--ink)}
+.plan{display:flex;flex-direction:column}
+.plan .rows{margin-bottom:22px}
+.plan .buy{width:100%;margin-top:auto;text-align:center}
+.mat{margin:26px 0 0;max-width:62ch}
+.two>*{min-width:0}
+.two dd{min-width:0;overflow-wrap:anywhere}
+.price small{display:block;margin-top:6px}
+@media (max-width:600px){nav{position:static}}
+.wrap{padding-left:max(22px,env(safe-area-inset-left));padding-right:max(22px,env(safe-area-inset-right))}
+h2,h3{overflow-wrap:break-word}
+.prof h3{font-size:clamp(1.35rem,5.6vw,1.7rem);line-height:1.08;letter-spacing:.015em}
+.prof p{line-height:1.45}
+.prof>div{min-width:0}
+.mark{position:absolute;left:0;bottom:0;width:100%;height:clamp(96px,25vw,300px);fill:var(--bronze);opacity:.15;pointer-events:none;animation:mk 1.4s ease both}
+.mark text{font:900 320px "Big Shoulders Display",Impact,"Arial Narrow",sans-serif}
+.hero .wrap{position:relative;z-index:1}
+@keyframes mk{from{opacity:0;transform:translateY(30px)}to{opacity:.15;transform:none}}
+.plan{box-shadow:0 0 0 1px rgba(201,138,69,.18),0 10px 30px -18px rgba(201,138,69,.5)}
+.plan::after{background:radial-gradient(260px circle at var(--mx,50%) var(--my,30%),rgba(224,160,90,.3),transparent 70%)}
+.plan:hover,.plan.lit{z-index:1;transform:translateY(-6px);border-color:var(--bronze);box-shadow:0 0 0 1px var(--bronze),0 0 46px 4px rgba(224,160,90,.38),0 22px 70px -6px rgba(201,138,69,.6)}
+.plan:hover::after,.plan.lit::after{opacity:1}
+dialog{max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain;padding:22px;margin:auto}
+dialog h3{font-size:1.7rem;padding-right:34px}
+.x{position:absolute;top:10px;right:12px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:1.3rem;cursor:pointer}
+.kick{font:700 .85rem "Public Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);margin:0 0 10px}
+.visit{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:stretch}
+.visit h2{font-size:clamp(2.6rem,8vw,5rem);margin-bottom:22px}
+.visit h2 em{font-style:normal;color:var(--bronze)}
+.addr{display:flex;gap:16px;align-items:center;margin:0 0 16px}
+.addr .badge{width:64px;height:64px}
+.addr b{display:block;font:900 clamp(1.8rem,5vw,2.5rem)/1 "Big Shoulders Display",Impact,sans-serif}
+.addr span:not(.badge){color:var(--mute)}
+.park{display:flex;gap:10px;align-items:center;color:var(--mute);margin:0 0 24px}
+.map{position:relative;min-height:300px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:radial-gradient(circle at 50% 50%,rgba(201,138,69,.2),transparent 62%),#0A1118;box-shadow:0 0 70px -24px rgba(201,138,69,.6)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .lbl{position:absolute;left:14px;bottom:12px;font-size:.85rem;color:var(--mute)}
+.ping{fill:none;stroke:var(--bronze);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+.ping.d2{animation-delay:1.6s}
+.pinw{transform-box:fill-box;transform-origin:center;animation:bob 2.6s ease-in-out infinite}
+@keyframes ping{0%{transform:scale(.35);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+@keyframes bob{50%{transform:translateY(-7px)}}
+.ccs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:34px}
+.badge{flex:none}
+.cc{display:flex;gap:14px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg);text-decoration:none;min-width:0}
+.cc small{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.cc b{display:block;overflow-wrap:anywhere}
+.btn{transition:background .2s,color .2s,transform .25s,box-shadow .25s}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+body::before{animation:breathe 9s ease-in-out infinite alternate}
+@keyframes breathe{to{transform:scale(1.07)}}
+@media (hover:hover){.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -10px rgba(201,138,69,.7)}.svc article{transition:transform .3s}.svc article:hover{transform:translateY(-4px)}.ticks li{transition:transform .3s}.ticks li:hover{transform:translateX(6px)}.cc{transition:transform .3s,border-color .3s,box-shadow .3s}.cc:hover{transform:translateY(-3px);border-color:var(--bronze);box-shadow:0 14px 34px -12px rgba(201,138,69,.65)}}
+@media (max-width:860px){.visit{grid-template-columns:minmax(0,1fr);gap:26px}.map{min-height:240px}}
+@media (max-width:560px){.ccs{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){
+.wrap{padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
+h2{font-size:clamp(2rem,9.5vw,2.6rem);line-height:1.05;margin-bottom:18px}.visit h2{font-size:clamp(2.4rem,12vw,3.4rem)}
+.lead{font-size:1.05rem}
+.prof{padding:16px 30px 16px 16px;gap:12px;grid-template-columns:48px 1fr}.badge{width:48px;height:48px}.addr .badge{width:56px;height:56px}
+.cards{gap:10px}
+.plan{padding:14px 16px;display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:12px}
+.plan h3{margin:0;font-size:1.5rem}
+.plan .price{margin:0;text-align:right;font-size:2.2rem}
+.plan .price small{margin-top:2px;font-size:.8rem}
+.plan .rows{grid-column:1/-1;margin:10px 0 12px;padding-top:10px;grid-template-columns:1fr 1fr;gap:0 12px;font-size:.88rem}
+.rows dt:nth-of-type(1){grid-area:1/1}.rows dd:nth-of-type(1){grid-area:2/1;margin:0}.rows dt:nth-of-type(2){grid-area:1/2}.rows dd:nth-of-type(2){grid-area:2/2;margin:0}
+.plan .buy{grid-column:1/-1;padding:11px 16px}
+#tarifas .mat{margin-top:18px}
+dialog{width:calc(100vw - 32px);padding:18px 16px}dialog h3{font-size:1.45rem}label{margin-top:8px;font-size:.88rem}input{padding:10px}
+dialog .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}dialog .btn{padding:11px 10px;text-align:center}dialog .verify{margin-top:12px}}
+@media (prefers-reduced-motion:reduce){body::before,.ping,.pinw,.mark{animation:none}.rv{opacity:1;transform:none;transition:none}.btn:hover,.cc:hover{transform:none}}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.bar .fillg{fill:var(--bronze)}
+dialog{background:var(--bg2);color:var(--ink);border:1px solid var(--bronze);border-radius:10px;padding:26px;width:min(440px,92vw)}
+dialog::backdrop{background:rgba(5,10,15,.72);backdrop-filter:blur(3px)}
+dialog h3{font-size:2rem;margin-bottom:6px}
+label{display:block;margin:12px 0 0;font-weight:600;font-size:.92rem}
+input{width:100%;margin-top:6px;padding:12px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+@media (max-width:860px){.para{grid-template-columns:1fr;gap:28px}.para-intro{position:static}}
+@media (prefers-reduced-motion:reduce){.prof{transition:none}.prof:hover{transform:none}}
+.plan{position:relative;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+.plan::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(240px circle at var(--mx,50%) var(--my,0%),rgba(224,160,90,.22),transparent 70%);opacity:0;transition:opacity .4s;pointer-events:none}
+@media (hover:hover){.plan:hover{z-index:1;transform:translateY(-6px);border-color:var(--bronze);box-shadow:0 0 0 1px var(--bronze),0 18px 50px -10px rgba(181,121,58,.55),0 0 90px 6px rgba(224,160,90,.22)}.plan:hover::after{opacity:1}}
+@media (hover:none){.plan{border-top:4px solid var(--bronze);box-shadow:0 10px 28px -14px rgba(181,121,58,.55)}}
+@media (prefers-reduced-motion:reduce){.plan{transition:none}.plan:hover{transform:none}}
+@media (max-width:760px){.two{grid-template-columns:1fr;gap:26px}.hero{padding:52px 0 64px}section{padding:56px 0}}
+@media (prefers-reduced-motion:reduce){.hero h1{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol><symbol id="i-flag" viewBox="0 0 24 24"><path d="M6 21V4M6 5h11l-2 4 2 4H6"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5C6 4.5 9 4.5 12 6c3-1.5 6-1.5 8-.5V19c-2-1-5-1-8 .5-3-1.5-6-1.5-8-.5z"/><path d="M12 6v13.5"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.5A4 4 0 0119 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 5a3.5 3.5 0 010 7M18 14.8c2 .6 3.3 2.3 3.8 5.2"/><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-cam" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol></svg>
+<nav><div class="wrap"><b>SPARTAN CENTER</b><div><a href="#servicios">Servicios</a><a href="#para-quien">Para quién</a><a href="#horarios">Horarios</a><a href="#tarifas">Tarifas</a><a href="#contacto">Contacto</a></div></div></nav>
+
+<header class="hero"><svg class="mark" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"><text x="0" y="300" textLength="1000" lengthAdjust="spacingAndGlyphs">SPARTAN</text></svg><div class="wrap">
+<h1>Un plan hecho para ti, no para todos.</h1>
+<p>Spartan Center es un centro de asesoramiento físico y nutricional en Segovia. Todo el trabajo se centra en la persona.</p>
+<div class="btns"><a class="btn main" href="tel:+34921047127">Llamar al 921 04 71 27</a><a class="btn ghost" href="#horarios">Consultar horarios</a><a class="btn ghost" href="#servicios">Ver servicios</a></div>
+</div></header>
+
+<section id="sobre"><div class="wrap two">
+<h2>Un centro de barrio con método</h2>
+<div><p class="lead">Spartan Center se presenta como el primer centro de Segovia especializado en el asesoramiento nutricional y físico.</p>
+<p class="mute">Gestionado por el equipo del propio centro, con una atención directa y personalizada.</p></div>
+</div></section>
+
+<section id="servicios" class="alt"><div class="wrap">
+<h2>Qué encontrarás</h2>
+<div class="svc">
+<article><h3>Tabla personalizada</h3><p>Un programa de ejercicios adaptado a lo que buscas y a tu nivel.</p></article>
+<article><h3>Mediciones</h3><p>Mediciones antropométricas y de grasa corporal para seguir tu progreso.</p></article>
+<article><h3>Seguimiento nutricional</h3><p>Asesoramiento sobre alimentación para acompañar el entrenamiento.</p></article>
+<article><h3>Sala de entrenamiento</h3><p>Máquinas y material para trabajar fuerza y condición física, con ayuda para usarlos bien.</p></article>
+</div>
+</div></section>
+
+<section id="para-quien"><div class="wrap para">
+<div class="para-intro"><h2>Para quién es Spartan Center</h2>
+<svg class="bar" viewBox="0 0 260 90" aria-hidden="true"><defs><clipPath id="bclip"><rect x="0" y="0" width="0" height="90"/></clipPath><g id="bb"><rect x="6" y="28" width="14" height="34" rx="3"/><rect x="24" y="16" width="16" height="58" rx="3"/><rect x="44" y="41" width="172" height="8" rx="3"/><rect x="220" y="16" width="16" height="58" rx="3"/><rect x="240" y="28" width="14" height="34" rx="3"/></g></defs><use href="#bb"/><use href="#bb" class="fillg" clip-path="url(#bclip)"/></svg>
+<p class="lead">Un sitio para cada nivel y cada objetivo.</p>
+<p><a class="btn main" href="tel:+34921047127">Cuéntanos tu objetivo</a></p></div>
+<div class="profs">
+<div class="prof"><span class="badge"><svg class="ico"><use href="#i-flag"/></svg></span><div><h3>Primeros pasos</h3><p>Aprende a entrenar bien desde el primer día, con orientación.</p></div></div>
+<div class="prof"><span class="badge"><svg class="ico"><use href="#i-book"/></svg></span><div><h3>Opositores</h3><p>Entrenamiento ordenado para mantenerte en forma mientras estudias.</p></div></div>
+<div class="prof"><span class="badge"><svg class="ico"><use href="#i-heart"/></svg></span><div><h3>Mayores que se inician</h3><p>Un primer contacto con el ejercicio, con trato cercano y a tu ritmo.</p></div></div>
+<div class="prof"><span class="badge"><svg class="ico"><use href="#i-pin"/></svg></span><div><h3>De paso en Segovia</h3><p>Por trabajo o por una temporada: mantén tu rutina de entrenamiento.</p></div></div>
+<div class="prof"><span class="badge"><svg class="ico"><use href="#i-people"/></svg></span><div><h3>Trato cercano</h3><p>Atención personalizada y un equipo pendiente de ti.</p></div></div>
+</div></div></section>
+
+<section id="ambiente" class="alt"><div class="wrap">
+<h2>Atención personalizada y buen ambiente</h2>
+<ul class="ticks">
+<li><svg class="ico"><use href="#i-check"/></svg>Trato cercano y profesional</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Atención individualizada</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Instalaciones limpias</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Ambiente adecuado para entrenar</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Orientación para todos los niveles de experiencia</li>
+</ul>
+</div></section>
+
+<section id="horarios"><div class="wrap">
+<h2>Horarios</h2>
+<div class="cards hrs">
+<div class="card big"><svg class="ico"><use href="#i-clock"/></svg><h3>Lunes a viernes</h3><span class="time">6:00 – 22:00</span><p>Dieciséis horas al día para encajar el entrenamiento en tu rutina.</p></div>
+<div class="card big"><svg class="ico"><use href="#i-clock"/></svg><h3>Sábados</h3><span class="time">10:00 – 14:00</span><p>Entrena por la mañana con calma.</p></div>
+<div class="card big"><svg class="ico"><use href="#i-clock"/></svg><h3>Domingos</h3><span class="time">Cerrado</span><p>Día de descanso.</p></div>
+</div>
+<div class="chip"><svg class="ico"><use href="#i-pin"/></svg><p>Plaza 1 de Mayo, Segovia. Aparcar en la zona resulta cómodo.</p></div>
+<p class="verify">Horario y aparcamiento: información recopilada, pendiente de confirmar con el centro.</p>
+</div></section>
+
+<section id="tarifas" class="alt"><div class="wrap">
+<h2>Tarifas</h2>
+<div class="cards">
+<div class="card plan"><h3>Mensual</h3><div class="price">45 €<small> /mes</small></div><dl class="rows"><dt>Cuota mensual</dt><dd>45 €</dd><dt>Matrícula</dt><dd>Se cobra el primer mes (importe por confirmar)</dd></dl><button class="btn main buy" type="button" data-plan="Mensual" data-price="45 €/mes" data-note="matrícula en el primer mes (importe por confirmar)">Contratar</button></div>
+<div class="card plan"><h3>Trimestral</h3><div class="price">120 €<small> /trimestre</small></div><dl class="rows"><dt>Cuota mensual</dt><dd>40 €</dd><dt>Matrícula</dt><dd>No se paga</dd></dl><button class="btn main buy" type="button" data-plan="Trimestral" data-price="120 €/trimestre" data-note="sin matrícula">Contratar</button></div>
+<div class="card plan"><h3>Semestral</h3><div class="price">235 €<small> /semestre</small></div><dl class="rows"><dt>Cuota mensual</dt><dd>39 €</dd><dt>Matrícula</dt><dd>No se paga</dd></dl><button class="btn main buy" type="button" data-plan="Semestral" data-price="235 €/semestre" data-note="sin matrícula">Contratar</button></div>
+<div class="card plan"><h3>Anual</h3><div class="price">460 €<small> /año</small></div><dl class="rows"><dt>Cuota mensual</dt><dd>38 €</dd><dt>Matrícula</dt><dd>No se paga</dd></dl><button class="btn main buy" type="button" data-plan="Anual" data-price="460 €/año" data-note="sin matrícula">Contratar</button></div>
+</div>
+<p class="mat"><strong>Matrícula.</strong> La tarifa mensual la lleva en el primer mes. Las tarifas trimestral, semestral y anual no la pagan.</p>
+<p class="verify">Importe de la matrícula por confirmar. Tarifas tomadas de un cartel del centro: confirma que siguen vigentes en el 921 04 71 27.</p>
+</div></section>
+
+<section id="por-que" class="why"><div class="wrap">
+<h2>Por qué elegir Spartan Center</h2>
+<ul class="ticks">
+<li><svg class="ico"><use href="#i-check"/></svg>Atención personalizada</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Trato cercano</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Amplio horario de apertura</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Entorno limpio</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Entrenamiento para distintos perfiles y niveles</li>
+<li><svg class="ico"><use href="#i-check"/></svg>Ubicación práctica</li>
+</ul>
+<div class="btns"><a class="btn main" href="tel:+34921047127">Llamar al 921 04 71 27</a><a class="btn ghost" href="#contacto">Cómo llegar</a></div>
+</div></section>
+
+<section id="normas"><div class="wrap">
+<div class="rule"><svg class="ico"><use href="#i-check"/></svg><div><h3>Norma de convivencia</h3><p>Pedimos no acceder a las instalaciones con calzado de calle. Ayuda a mantener la higiene y la limpieza del gimnasio para todos.</p></div></div>
+</div></section>
+
+<section id="contacto" class="alt"><div class="wrap">
+<div class="visit">
+<div>
+<p class="kick">Spartan Center · Segovia</p>
+<h2>Ven a <em>conocernos</em></h2>
+<div class="addr"><span class="badge"><svg class="ico"><use href="#i-pin"/></svg></span><div><b>Plaza 1 de Mayo, 4</b><span>40005 Segovia</span></div></div>
+<p class="park"><svg class="ico"><use href="#i-check"/></svg>Aparcar en la zona resulta cómodo.</p>
+<div class="btns"><a class="btn main" href="https://www.google.com/maps/dir/?api=1&amp;destination=Spartan+Center+Plaza+1+de+Mayo+4+Segovia" rel="noopener">Cómo llegar</a><a class="btn ghost" href="tel:+34921047127">Llamar ahora</a></div>
+<p class="verify">Dirección y aparcamiento: información recopilada, pendiente de confirmar con el centro.</p>
+</div>
+<div class="map" aria-hidden="true"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><path d="M-20 230L420 70M-20 90L420 250M130 -10L170 310M300 -10L250 310" stroke="rgba(255,255,255,.08)" stroke-width="12" fill="none"/><path d="M-20 230L420 70M-20 90L420 250M130 -10L170 310M300 -10L250 310" stroke="rgba(201,138,69,.28)" stroke-width="1" stroke-dasharray="6 8" fill="none"/><circle class="ping" cx="200" cy="160" r="90"/><circle class="ping d2" cx="200" cy="160" r="90"/><g class="pinw"><use href="#i-pin" x="176" y="110" width="48" height="48" stroke="#C98A45" fill="rgba(201,138,69,.35)" stroke-width="1.5" stroke-linecap="round"/></g></svg><span class="lbl">Plaza 1 de Mayo · Segovia</span></div>
+</div>
+<div class="ccs">
+<a class="cc" href="tel:+34921047127"><span class="badge"><svg class="ico"><use href="#i-phone"/></svg></span><span><small>Teléfono</small><b>921 04 71 27</b></span></a>
+<a class="cc" href="mailto:spartancentersegovia@gmail.com"><span class="badge"><svg class="ico"><use href="#i-mail"/></svg></span><span><small>Correo</small><b>spartancentersegovia@gmail.com</b></span></a>
+<a class="cc" href="https://www.instagram.com/spartancentersegovia/" rel="noopener"><span class="badge"><svg class="ico"><use href="#i-cam"/></svg></span><span><small>Instagram</small><b>@spartancentersegovia</b></span></a>
+<a class="cc" href="https://x.com/SPARTANCENTERSG" rel="noopener"><span class="badge"><svg class="ico"><use href="#i-x"/></svg></span><span><small>X</small><b>@SPARTANCENTERSG</b></span></a>
+</div></div></section>
+
+<section id="faq"><div class="wrap"><h2>Preguntas frecuentes</h2>
+<details><summary>¿Qué horario tiene?</summary><p>De lunes a viernes de 6:00 a 22:00, sábados de 10:00 a 14:00 y domingos cerrado. Pendiente de confirmar con el centro.</p></details>
+<details><summary>¿Cuánto cuesta?</summary><p>Hay tarifa mensual, trimestral, semestral y anual. Mira la sección de tarifas y confirma con el centro que siguen vigentes.</p></details>
+<details><summary>¿Puedo entrar con calzado de calle?</summary><p>No. Se pide no acceder con calzado de calle para mantener la higiene y la limpieza.</p></details>
+<details><summary>¿Hacen tablas de ejercicios personalizadas?</summary><p>Sí, el centro prepara programas personalizados según lo que necesites.</p></details>
+<details><summary>¿Ofrecen seguimiento nutricional?</summary><p>Sí, el centro se presenta como especializado en asesoramiento nutricional y físico.</p></details>
+</div></section>
+
+<footer class="site"><div class="wrap">Spartan Center Segovia · Demostración de diseño web. Datos tomados de fuentes públicas y pendientes de confirmar con el negocio.</div></footer>
+<dialog id="buy" aria-labelledby="buy-t"><form id="bf"><button class="x" type="button" id="bx2" aria-label="Cerrar">×</button><h3 id="buy-t">Contratar tarifa <span id="bp"></span></h3><p class="mute" id="bs"></p>
+<label>Nombre<input name="n" required autocomplete="name"></label>
+<label>Teléfono<input name="t" type="tel" required autocomplete="tel"></label>
+<label>Correo<input name="e" type="email" autocomplete="email"></label>
+<p class="verify">Se abrirá tu correo con la solicitud lista para enviar. En esta web no se realiza ningún pago.</p>
+<div class="btns"><button class="btn main" type="submit">Enviar solicitud</button><a id="pay" class="btn main" href="#" hidden>Ir al pago</a><button class="btn ghost" type="button" id="bx">Cancelar</button></div></form></dialog>
+<script>var d=document.getElementById('buy'),f=document.getElementById('bf'),cur=null,PAY={};/* enlaces de pago por tarifa, p. ej. PAY.Anual='https://...' */
+document.querySelectorAll('.buy').forEach(function(b){b.addEventListener('click',function(){cur=b.dataset;document.getElementById('bp').textContent=cur.plan.toLowerCase();document.getElementById('bs').textContent=cur.price+' · '+cur.note;var p=document.getElementById('pay');p.hidden=!PAY[cur.plan];if(PAY[cur.plan])p.href=PAY[cur.plan];d.showModal()})});
+document.getElementById('bx').onclick=document.getElementById('bx2').onclick=function(){d.close()};
+f.addEventListener('submit',function(e){e.preventDefault();var x=new FormData(f),body='Hola, quiero contratar la tarifa '+cur.plan+' ('+cur.price+').\nNombre: '+x.get('n')+'\nTeléfono: '+x.get('t')+'\nCorreo: '+(x.get('e')||'-');location.href='mailto:spartancentersegovia@gmail.com?subject='+encodeURIComponent('Solicitud tarifa '+cur.plan)+'&body='+encodeURIComponent(body);d.close()});
+</script>
+<script>
+document.querySelectorAll('.plan').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')});c.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse')return;document.querySelectorAll('.plan.lit').forEach(function(x){if(x!==c)x.classList.remove('lit')});c.classList.add('lit')})});
+(function(){var r=document.querySelector('#bclip rect'),s=document.querySelector('.bar');if(!r||!s)return;var run=false;function go(){if(run)return;run=true;var t0=null;function st(t){if(!t0)t0=t;var p=Math.min((t-t0)/2800,1),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;r.setAttribute('width',260*e);if(p<1)requestAnimationFrame(st)}requestAnimationFrame(st)}if('IntersectionObserver' in window){new IntersectionObserver(function(en,o){if(en[0].isIntersecting){go();o.disconnect()}},{threshold:.6}).observe(s)}else go()})();
+(function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver' in window))return;var els=document.querySelectorAll('section h2,.svc article,.prof,.ticks li,.hrs .card,.plan,.cc,.map,.addr,.mat,details,.rule');els.forEach(function(e){e.classList.add('rv');var i=[].indexOf.call(e.parentNode.children,e);e.style.setProperty('--d',Math.min(i,5)*.08+'s')});var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var e=x.target;e.classList.add('in');io.unobserve(e);setTimeout(function(){e.classList.remove('rv','in');e.style.removeProperty('--d')},1300)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
